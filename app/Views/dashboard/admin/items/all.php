@@ -65,9 +65,9 @@
                                 <td scope="col"><?= $item->price ?></td>
                                 <td scope="col">
                                    <div class="d-flex flex-column flex-md-row gap-1">
-                                        <a href="#" class="btn btn-sm btn-success">Stock Entry</a>
-                                        <a href="#" class="btn btn-sm btn-primary">Update</a>
-                                        <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                                        <a href="#" class="btn btn-sm btn-success"><i class="fa-regular fa-square-plus"></i> Stock Entry</a>
+                                        <a href="#" class="btn btn-sm btn-primary"><i class="fa-regular fa-pen-to-square"></i> Update</a>
+                                        <a href="#" class="btn btn-sm btn-danger"><i class="fa-regular fa-trash-can"></i> Delete</a>
                                    </div>
                                 </td>
                             </tr>
