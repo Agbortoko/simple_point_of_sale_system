@@ -20,7 +20,7 @@
                 <?= $pageTitle ?>
             </div>
             <div class="card-body table-responsive">
-                <table id="datatablesSimple" class="table table-striped">
+                <table id="datatablesSimple">
                     <thead>
                         <tr>
                             <th>Name</th>
