@@ -12,3 +12,4 @@ $routes->get('/login', 'Auth\Login::index', ['as' => 'login']);
 $routes->post('/logout', 'Auth\Login::logout', ['as' => 'logout']); 
 $routes->post('/authenticate', 'Auth\Login::authenticate', ['as' => 'authenticate']); 
 $routes->get('/admin/dashboard', 'Dashboard\Admin\OverviewController::index', ['as' => 'admin.dashboard']); 
+$routes->get('/admin/dashboard/inventory', 'Dashboard\Admin\ItemController::index', ['as' => 'admin.dashboard.items']); 

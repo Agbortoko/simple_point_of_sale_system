@@ -37,7 +37,7 @@ class CategorySeeder extends Seeder
 
        
        foreach($categories as $category) {
-            $this->db->table('category')->insert($category);
+            $this->db->table('categories')->insert($category);
        }
     }
 }

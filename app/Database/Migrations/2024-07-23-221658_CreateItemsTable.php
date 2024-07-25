@@ -59,7 +59,7 @@ class CreateItemsTable extends Migration
         ]);
 
         $this->forge->addKey('id', true);
-        $this->forge->addForeignKey('category_id', 'id', 'category');
+        $this->forge->addForeignKey('category_id', 'categories', 'id', 'CASCADE', 'CASCADE');
         $this->forge->createTable('items');
 
         $this->db->enableForeignKeyChecks();

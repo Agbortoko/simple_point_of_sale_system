@@ -47,7 +47,7 @@ class CreateSalesTable extends Migration
         ]);
 
         $this->forge->addKey('id', true);
-        $this->forge->addForeignKey('item_id', 'id', 'items');
+        $this->forge->addForeignKey('item_id', 'items', 'id', 'CASCADE', 'CASCADE');
         $this->forge->createTable('sales');
 
         $this->db->enableForeignKeyChecks();
