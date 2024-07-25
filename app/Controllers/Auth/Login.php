@@ -29,7 +29,6 @@ class Login extends BaseController
 
         $data = [];
 
-
         if($this->request->getMethod() == "POST") {
 
             $rules = [
@@ -89,13 +88,26 @@ class Login extends BaseController
                 
             }
             else {
-                $data['validation'] = $this->validator;
+                $this->session->setFlashdata('validation', $this->validator);
+                return redirect()->to(route_to('login'));
             }
         }
     }
 
-    public function verifyEmail()
+    public function logout()
     {
+        if($this->request->getMethod() == "POST"){
 
+                $this->session->remove('logged_user');
+                $this->session->remove('logged_user_role');
+                $this->session->regenerate(true);
+                
+                $this->session->setFlashdata('success', "Logout Successful");
+                return redirect()->to(route_to('login'));
+        }
+        else {
+            $this->session->setFlashdata('error', "Invalid Request");
+            return redirect()->back();
+        }
     }
 }
