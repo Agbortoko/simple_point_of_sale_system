@@ -12,7 +12,7 @@ class AccountSeeder extends Seeder
         $accounts = [
             [
                 'username' => 'admin',
-                'password'    => 'admin1234',
+                'password'    => password_hash('admin', PASSWORD_DEFAULT),
                 'account_type' => 'admin',
                 'date_created' => Carbon::now(),
                 'created_by' => 'admin'
@@ -20,7 +20,7 @@ class AccountSeeder extends Seeder
 
             [
                 'username' => 'clerk',
-                'password'    => 'clerk1234',
+                'password'    => password_hash('clerk', PASSWORD_DEFAULT),
                 'account_type' => 'clerk',
                 'date_created' => Carbon::now(),
                 'created_by' => 'admin'
@@ -28,7 +28,7 @@ class AccountSeeder extends Seeder
 
             [
                 'username' => 'cashier',
-                'password'    => 'cashier1234',
+                'password'    =>  password_hash('cashier', PASSWORD_DEFAULT),
                 'account_type' => 'cashier',
                 'date_created' => Carbon::now(),
                 'created_by' => 'admin'
